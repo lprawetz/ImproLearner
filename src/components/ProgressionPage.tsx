@@ -14,7 +14,7 @@ const ProgressionPage: React.FC<ProgressionPageProps> = ({ navigation }) => {
       <TouchableOpacity
         style={styles.button}
         onPress={() => navigation.goBack()}>
-        <Text style={styles.buttonText}>Back</Text>
+        <Text style={styles.buttonText}>&lt;</Text>
       </TouchableOpacity>
     </View>
   );

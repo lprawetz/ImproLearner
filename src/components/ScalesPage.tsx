@@ -14,7 +14,7 @@ const ScalesPage: React.FC<ScalesPageProps> = ({ navigation }) => {
       <TouchableOpacity
         style={styles.button}
         onPress={() => navigation.goBack()}>
-        <Text style={styles.buttonText}>Back</Text>
+        <Text style={styles.buttonText}>&lt;</Text>
       </TouchableOpacity>
     </View>
   );
@@ -30,4 +30,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#1e90ff',
     padding: 10,
     margin: 10,
-    borderRadius: 5
+    borderRadius: 5,
+},
+buttonText: {
+  color: 'white',
+  fontSize: 18,
+},
+});
+
+export default ScalesPage;
