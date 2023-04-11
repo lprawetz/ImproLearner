@@ -1,7 +1,13 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RootStackParamList } from '../../App';
 
-const HomePage = ({ navigation }) => {
+type HomePageProps = {
+    navigation: StackNavigationProp<RootStackParamList, 'Home'>;
+  };
+
+const HomePage: React.FC<HomePageProps> = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity
