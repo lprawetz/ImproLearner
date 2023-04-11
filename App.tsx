@@ -16,6 +16,12 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import HomePage from './src/components/HomePage';
+import ChordsPage from './src/components/ChordsPage';
+import ScalesPage from './src/components/ScalesPage';
+import ProgressionPage from './src/components/ProgressionPage';
 
 import {
   Colors,
