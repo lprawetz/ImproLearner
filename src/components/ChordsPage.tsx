@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Button } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import PianoKeyboard from './PianoKeyboard';
 import { useNavigation } from '@react-navigation/native';
+import chordsData from '../data/chordsData';
 
 const rootNotes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
 
@@ -20,6 +21,10 @@ const ChordsPage = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Chords</Text>
+      
+      <View style={styles.goBackButton}>
+        <Button title="Go Back" onPress={() => navigation.goBack()} />
+      </View>
 
       <Picker
         selectedValue={selectedRootNote}
@@ -42,11 +47,8 @@ const ChordsPage = () => {
         </View>
       )}
 
-      {/* Add more conditions for other root notes when needed */}
+      /* Add more conditions for other root notes when needed */
 
-      <View style={styles.goBackButton}>
-        <Button title="Go Back" onPress={() => navigation.goBack()} />
-      </View>
     </View>
   );
 };
